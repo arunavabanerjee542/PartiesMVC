@@ -1,0 +1,28 @@
+﻿@model Attendes
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1> Thank you @Model.Name For Your Response</h1>
+
+@if(Model.WillAttend== true)
+{
+<p1>
+    It's great that you're coming. The drinks
+    are already in the fridge!
+</p1>
+}
+else
+{
+<p1>
+    Sorry to hear that you can't make it, but
+    thanks for letting us know.
+</p1>
+
+}
+
+<a asp-action="AttendeList"> CLICK HERE </a> To see Who all are comming.
+

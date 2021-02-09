@@ -1,0 +1,45 @@
+﻿@model Attendes
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Rspv Page";
+}
+
+<form asp-action="Rspv" method="post">
+    <div class="mb-3">
+        <label asp-for="Name"> NAME </label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email"> Email </label>
+        <input class="form-control" asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Phone"> Phone </label>
+        <input class="form-control" asp-for="Phone" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="WillAttend"> Will You Attend  </label>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" asp-for="WillAttend">
+            <option value=""> Select Option</option>
+            <option value=true>Yes, I Will Come </option>
+            <option value=false>No, I Cant Come</option>
+        </select>
+        </br>
+        <span asp-validation-for="WillAttend" class="text-danger"></span>
+
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger">  </div>
+
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit"> SUBMIT </button>
+    </div>
+
+</form>
