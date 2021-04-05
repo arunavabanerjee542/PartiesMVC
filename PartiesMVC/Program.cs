@@ -11,6 +11,7 @@ namespace PartiesMVC
 {
     public class Program
     {
+        //Just a comment 
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
